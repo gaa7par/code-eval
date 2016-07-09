@@ -1,11 +1,10 @@
 def fibonacci_series(input)
-  number = 0
+  numbers = []
 
-  input.each_line do |line|
-    number = line
-    number.delete!("\n")
-    number = number.to_i
+  numbers = input.split("\n")
+  numbers.map! {|n| n.to_i}
 
+  numbers.each do |number|
     puts fibonacci(number)
   end
 end
